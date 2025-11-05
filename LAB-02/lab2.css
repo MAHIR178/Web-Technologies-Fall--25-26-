@@ -1,0 +1,35 @@
+
+body {
+margin: center;
+padding:30px;
+
+}
+
+table {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 300px;
+    margin-right: 150px;
+    background-color: grey;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+
+}
+
+label {
+    color: aliceblue;
+  
+}
+input[type="button"] {
+    border-radius: 5px;
+    border-color: transparent;
+}
+input[type="submit"]{
+    border-radius: 5px;
+    border-color: transparent;
+    margin-left: 80px;
+    margin-top: 50px;
+}
