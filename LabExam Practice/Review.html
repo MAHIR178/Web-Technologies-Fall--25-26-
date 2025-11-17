@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="review.css">
 </head>
 <body>
-    <div>
+    <div class="productbox">
         <div>
         <h1>
             Oraimmo Noise Cancellation Headphones
@@ -24,6 +25,8 @@
         <div>
             <input type="button" value="Buy Now">
         </div>
+    </div>
+    <div>
         <div class="Review">
             <div>
             <h3>Write a Review</h3>
@@ -58,21 +61,22 @@
             <textarea id="product" name="product" rows="4" cols="50"></textarea>
             <p id="productErr" style="color:red;"></p>
             </div>
-           <div >
-  <input type="radio" id="star5" name="rating" value="5" />
+           <div class="">
+  <input type="checkbox" id="star5" name="rating" value="5" />
   <label for="star5" title="5 stars"></label>
 
-  <input type="radio" id="star4" name="rating" value="4" />
+  <input type="checkbox" id="star4" name="rating" value="4" />
   <label for="star4" title="4 stars"></label>
 
-  <input type="radio" id="star3" name="rating" value="3" />
+  <input type="checkbox" id="star3" name="rating" value="3" />
   <label for="star3" title="3 stars"></label>
 
-  <input type="radio" id="star2" name="rating" value="2" />
+  <input type="checkbox" id="star2" name="rating" value="2" />
   <label for="star2" title="2 stars"></label>
 
-  <input type="radio" id="star1" name="rating" value="1" />
+  <input type="checkbox" id="star1" name="rating" value="1" />
   <label for="star1" title="1 star"></label>
+    <p id="ratingErr" style="color:red;"></p>
 </div>
             <div>
           <button onclick="handleValidation()">Submit review</button>
