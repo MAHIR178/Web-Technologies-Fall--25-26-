@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+        <h1>
+            Oraimmo Noise Cancellation Headphones
+        </h1>
+        </div>
+        <div>
+        <p>
+            Experience the ultimate in sound quality with Oraimmo Noise Cancellation Headphones. Designed to block out unwanted noise, these headphones provide crystal clear audio for music, calls, and more. 
+            With comfortable ear cushions and a sleek design, you can enjoy your favorite tunes for hours on end without discomfort. Whether you're commuting, working, or relaxing, Oraimmo headphones are your perfect companion for immersive sound. 
+        </p>        
+    </div>
+        <div>
+            <h4>Price: 8000</h4>
+        </div>
+        <div>
+            <input type="button" value="Buy Now">
+        </div>
+        <div class="Review">
+            <div>
+            <h3>Write a Review</h3>
+            </div>
+            <div>
+            <label for="name">Name:</label>
+            
+            </div>
+            <div>
+            <input type="text" id="name" name="name">
+            <p id="nameErr" style="color:red;"></p>
+            </div>
+            <div>
+            <label for="email">Email:</label>
+
+            </div>
+            <div>
+            <input type="email" id="email" name="email">
+            <p id="emailErr" style="color:red;"></p>    
+            </div>
+            <div>
+            <label for="review">Review Title:</label>
+            </div>
+            <div>
+            <input type="text" id="review" name="review">
+            <p id="reviewErr" style="color:red;"></p>
+            </div>
+            <div>
+            <label for="product">Product Description:</label>
+            </div>
+            <div>
+            <textarea id="product" name="product" rows="4" cols="50"></textarea>
+            <p id="productErr" style="color:red;"></p>
+            </div>
+           <div >
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5" title="5 stars"></label>
+
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4" title="4 stars"></label>
+
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3" title="3 stars"></label>
+
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2" title="2 stars"></label>
+
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1" title="1 star"></label>
+</div>
+            <div>
+          <button onclick="handleValidation()">Submit review</button>
+            </div>
+        
+        
+                  
+                
+    
+
+    
+        </div>
+    </div>
+
+
+</body>
+<script>
+    function handleValidation(){
+        const nameInput = document.getElementById("name");
+         const nameErr = document.getElementById("nameErr");
+       
+        if(nameInput.value === ""){
+            nameErr.innerHTML = "Name cannot be empty";
+
+        }else if(nameInput.value.length < 3){
+            nameErr.innerHTML = "Name must be at least 3 characters long";
+        }else if(nameInput.value.length > 30){
+            nameErr.innerHTML = "Name cannot exceed 30 characters";
+        } else{
+            
+            nameErr.innerHTML = "";
+          
+        }
+        const emailInput = document.getElementById("email");
+        const emailErr = document.getElementById("emailErr");
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if(emailInput.value === ""){
+            emailErr.innerHTML = "Email cannot be empty";   
+
+    } else if(!emailInput.value.match(emailPattern)){
+            emailErr.innerHTML = "Please enter a valid email address";
+        } else{
+            emailErr.innerHTML = "";
+           
+        }
+        const review = document.getElementById("review");
+    const reviewErr = document.getElementById("reviewErr");
+    if(review.value === ""){
+        reviewErr.innerHTML = "Review title cannot be empty";
+    } else if(review.value.length < 5){
+        reviewErr.innerHTML = "";
+        reviewErr.innerHTML = "Review title must be at least 5 characters long";
+    }  else{
+        reviewErr.innerHTML = "";
+        
+    }
+    const product = document.getElementById("product");
+    const productErr = document.getElementById("productErr");
+    if(product.value === ""){
+        productErr.innerHTML = "Product description cannot be empty";
+    } else if(product.value.length < 10){
+        productErr.innerHTML = "Product description must be at least 10 characters long";
+    } else{
+        productErr.innerHTML = "";
+      
+    }
+    const rating = document.getElementById("rating");
+    const ratingErr = document.getElementById("ratingErr");
+    if(rating.value === ""){
+        ratingErr.innerHTML = "Please select a rating";
+    } else{
+        ratingErr.innerHTML = "";
+       
+    
+    }
+    if(nameErr.innerHTML === "" && emailErr.innerHTML === "" && reviewErr.innerHTML === "" && productErr.innerHTML === "" && ratingErr.innerHTML === ""){
+        alert("Review submitted successfully!");
+    }
+    
+}
+
+
+    
+</script>
+</html>
